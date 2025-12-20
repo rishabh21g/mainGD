@@ -1,4 +1,4 @@
-```markdown
+
 # ✏️ GoDraw - The Sketchy Infinite Whiteboard
 
 <div align="center">
@@ -75,7 +75,7 @@ Follow these steps to run the sketchiest whiteboard on your local machine:
 
 ## 📂 Project Structure
 
-```text
+
 godraw/
 ├── app/                  # Next.js App Router pages
 │   ├── layout.tsx        # Root layout with fonts & metadata
@@ -90,7 +90,7 @@ godraw/
 │   └── utils.ts          # CN utility for class merging
 ├── public/               # Static assets (images, icons)
 └── tailwind.config.ts    # Custom branding configuration
-```
+
 
 ---
 
@@ -109,4 +109,3 @@ GoDraw is a community-driven project. We love pull requests!
 ## 📄 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-```
