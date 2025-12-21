@@ -1,59 +1,23 @@
-import { BenefitsSection } from "@/components/layout/sections/benefits";
-import { CommunitySection } from "@/components/layout/sections/community";
-import { ContactSection } from "@/components/layout/sections/contact";
-import { FAQSection } from "@/components/layout/sections/faq";
-import { FeaturesSection } from "@/components/layout/sections/features";
-import { FooterSection } from "@/components/layout/sections/footer";
-import { HeroSection } from "@/components/layout/sections/hero";
-import { PricingSection } from "@/components/layout/sections/pricing";
-import { ServicesSection } from "@/components/layout/sections/services";
-import { SponsorsSection } from "@/components/layout/sections/sponsors";
-import { TeamSection } from "@/components/layout/sections/team";
-import { TestimonialSection } from "@/components/layout/sections/testimonial";
-
-export const metadata = {
-  title: "GoDraw a free , fast infinite whiteboard application",
-  description: "Free Shadcn landing page for developers",
-  openGraph: {
-    type: "website",
-    url: "www.godraw.app",
-    title: "GoDraw a free , fast infinite whiteboard application",
-    description: "GoDraw a free , fast infinite whiteboard application",
-    images: [
-      {
-        url: "https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/shadcn-vue.jpg",
-        width: 1200,
-        height: 630,
-        alt: "GoDraw a free , fast infinite whiteboard application",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "www.godraw.app",
-    title: "GoDraw a free , fast infinite whiteboard application",
-    description: "GoDraw a free , fast infinite whiteboard application",
-    images: [
-      "https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/shadcn-vue.jpg",
-    ],
-  },
-};
+import Header from "@/components/layout/Header"
+import Footer from "@/components/layout/Footer"
+import HeroSection from "@/components/sections/HeroSection"
+import FeaturesSection from "@/components/sections/FeaturesSection"
+import HowItWorksSection from "@/components/sections/HowItWorksSection"
+import CTASection from "@/components/sections/CTASection"
+import FAQSection from "@/components/sections/FAQSection"
 
 export default function Home() {
   return (
     <>
-      <HeroSection />
-      <SponsorsSection />
-      <BenefitsSection />
-      <FeaturesSection />
-      <ServicesSection />
-      <TestimonialSection />
-      <TeamSection />
-      <CommunitySection />
-      <PricingSection />
-      <ContactSection />
-      <FAQSection />
-      <FooterSection />
+      <Header />
+      <main>
+        <HeroSection />
+        <FeaturesSection />
+        <HowItWorksSection />
+        <FAQSection />
+        <CTASection />
+      </main>
+      <Footer />
     </>
-  );
+  )
 }

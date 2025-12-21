@@ -1,33 +1,24 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { cn } from "@/lib/utils";
-import { Navbar } from "@/components/layout/navbar";
-import { ThemeProvider } from "@/components/layout/theme-provider";
+import type { Metadata } from "next"
+import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "GoDraw a free , fast infinite whiteboard application",
-  description: "GoDraw a free , fast infinite whiteboard application",
-};
+  title: "GoDraw 🎨",
+  description: "Sketch, draw, and take quick notes with a lightning-fast canvas whiteboard.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="pt-br" suppressHydrationWarning>
-      <body className={cn("min-h-screen bg-background font-sans")}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
-          {children}
-        </ThemeProvider>
+    <html lang="en">
+      <body className="font-sketchy antialiased bg-background text-foreground overflow-x-hidden">
+        {children}
       </body>
     </html>
-  );
+  )
 }
-
