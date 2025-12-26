@@ -1,18 +1,19 @@
-import type { Metadata } from "next"
-import "./globals.css"
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GoDraw 🎨",
-  description: "Sketch, draw, and take quick notes with a lightning-fast canvas whiteboard.",
+  title: "GoDraw - Free Infinite Whiteboard",
+  description:
+    "Sketch, draw, and take quick notes with a lightning-fast canvas whiteboard.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "favicon.ico",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -20,5 +21,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  )
+  );
 }
