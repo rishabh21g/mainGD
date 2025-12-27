@@ -1,7 +1,6 @@
 "use client";
 
 import { MousePointer2, Pencil, Share2 } from "lucide-react";
-import { Arrow } from "@/components/decorations/Doodles";
 
 const steps = [
   {
@@ -27,7 +26,7 @@ const steps = [
 
 export default function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="py-24 bg-muted/30">
+    <section id="how-it-works" className="py-24 ">
       <div className="sketchy-container">
         {/* Header */}
         <div className="text-center mb-16">
@@ -38,57 +37,28 @@ export default function HowItWorksSection() {
             No learning curve. No complicated tools. Just draw.
           </p>
         </div>
-
-        <div className="relative">
-          {/* Static connecting line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 -translate-y-1/2">
-            <svg
-              className="w-full h-8"
-              viewBox="0 0 1200 30"
-              fill="none"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M100 15 Q 300 5, 400 15 T 600 15 T 800 15 T 1100 15"
-                stroke="hsl(var(--primary) / 0.3)"
-                strokeWidth="3"
-                strokeDasharray="10 10"
-                strokeLinecap="round"
-                fill="none"
-              />
-            </svg>
-          </div>
-
-          {/* Steps */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 relative z-10">
-            {steps.map((step, index) => (
-              <div key={step.number} className="relative">
-                <div className="bg-card p-8 border-3 border-primary rounded-[255px_15px_225px_15px/15px_225px_15px_255px] shadow-sketchy text-center">
-                  {/* Number badge */}
-                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg border-3 border-card">
-                    {step.number}
-                  </div>
-
-                  {/* Icon */}
-                  <div className="w-20 h-20 mx-auto mb-6 bg-accent/30 rounded-[15px_255px_15px_225px/225px_15px_255px_15px] flex items-center justify-center">
-                    <step.icon className="w-10 h-10 text-primary" />
-                  </div>
-
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted-foreground">{step.description}</p>
+        {/* Steps */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 relative z-10">
+          {steps.map((step, index) => (
+            <div key={step.number} className="relative">
+              <div className="bg-card p-8 border-3 border-primary rounded-md shadow-sketchy text-center">
+                {/* Number badge */}
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg border-3 border-card">
+                  {step.number}
                 </div>
 
-                {/* Static arrow */}
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-6 translate-x-1/2 -translate-y-1/2 text-primary/40">
-                    <Arrow className="w-12 h-6" />
-                  </div>
-                )}
+                {/* Icon */}
+                <div className="w-20 h-20 mx-auto mb-6 bg-accent/30 rounded-md flex items-center justify-center">
+                  <step.icon className="w-10 h-10 text-primary" />
+                </div>
+
+                <h3 className="text-2xl font-bold text-foreground mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-muted-foreground">{step.description}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -13,7 +13,7 @@ export default function SketchyCard({ children, className }: SketchyCardProps) {
     <div
       className={cn(
         "bg-card p-6 border-3 border-primary",
-        "rounded-[255px_15px_225px_15px/15px_225px_15px_255px]",
+        "rounded-md",
         "shadow-sketchy",
         className
       )}

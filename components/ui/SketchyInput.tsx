@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { cn } from "@/lib/utils"
-import { InputHTMLAttributes, forwardRef } from "react"
+import { cn } from "@/lib/utils";
+import { InputHTMLAttributes, forwardRef } from "react";
 
 interface SketchyInputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label?: string
+  label?: string;
 }
 
 const SketchyInput = forwardRef<HTMLInputElement, SketchyInputProps>(
@@ -18,7 +18,7 @@ const SketchyInput = forwardRef<HTMLInputElement, SketchyInputProps>(
           ref={ref}
           className={cn(
             "w-full px-4 py-3 bg-card border-2 border-primary",
-            "rounded-[15px_255px_15px_225px/225px_15px_255px_15px]",
+            "rounded-md",
             "focus:outline-none focus:ring-2 focus:ring-primary/50",
             "placeholder:text-muted-foreground/60",
             "transition-all duration-200",
@@ -28,10 +28,10 @@ const SketchyInput = forwardRef<HTMLInputElement, SketchyInputProps>(
           {...props}
         />
       </div>
-    )
+    );
   }
-)
+);
 
-SketchyInput.displayName = "SketchyInput"
+SketchyInput.displayName = "SketchyInput";
 
-export default SketchyInput
+export default SketchyInput;

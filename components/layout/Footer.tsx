@@ -65,22 +65,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-muted/30 pt-24 pb-12 overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-4 bg-[url('/images/paper-edge.svg')] bg-repeat-x opacity-50" />
-
-      {/* Decorative static doodles */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
-        <svg
-          className="absolute top-20 right-10 w-32 h-32 text-secondary"
-          viewBox="0 0 100 100"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path d="M50 50 m-40 0 a 40 40 0 1 0 80 0 a 40 40 0 1 0 -80 0" />
-        </svg>
-      </div>
-
+    <footer className=" pt-24 pb-12 overflow-hidden">
       <div className="sketchy-container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
           <div className="lg:col-span-5 space-y-8">
@@ -110,7 +95,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-card border-2 border-primary rounded-[255px_15px_225px_15px/15px_225px_15px_255px] flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground shadow-sketchy-sm"
+                  className="w-12 h-12 bg-card border-2 border-primary rounded-md flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground shadow-sketchy-sm"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5" />
@@ -143,7 +128,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="bg-card border-3 border-primary rounded-[15px_255px_15px_225px/225px_15px_255px_15px] p-8 md:p-10 shadow-sketchy mb-20">
+        <div className="bg-card border-3 border-primary rounded-md p-8 md:p-10 shadow-sketchy mb-20">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="max-w-md">
               <h3 className="text-2xl font-bold mb-2">
@@ -156,7 +141,7 @@ export default function Footer() {
 
             <div className="w-full md:w-auto flex-1 max-w-md">
               {isSubscribed ? (
-                <div className="bg-green-100 border-2 border-green-500 text-green-800 p-4 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] flex items-center gap-2">
+                <div className="bg-green-100 border-2 border-green-500 text-green-800 p-4 rounded-md flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5" />
                   <span>Thanks for subscribing!</span>
                 </div>
@@ -176,7 +161,7 @@ export default function Footer() {
                         placeholder="Enter your email"
                         className={cn(
                           "w-full px-4 py-3 bg-background border-2",
-                          "rounded-[255px_15px_225px_15px/15px_225px_15px_255px]",
+                          "rounded-md",
                           error ? "border-red-500" : "border-primary"
                         )}
                       />

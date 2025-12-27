@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Underline } from "@/components/decorations/Doodles";
 
 const faqs = [
   {
@@ -42,7 +41,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 bg-muted/20">
+    <section id="faq" className="py-24 ">
       <div className="sketchy-container">
         {/* Header */}
         <div className="text-center mb-16">
@@ -50,7 +49,6 @@ export default function FAQSection() {
             Got{" "}
             <span className="relative inline-block text-primary">
               questions?
-              <Underline className="absolute -bottom-2 left-0 w-full h-3 text-accent" />
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -66,7 +64,7 @@ export default function FAQSection() {
               key={index}
               className={cn(
                 "bg-card border-3 border-primary overflow-hidden",
-                "rounded-[255px_15px_225px_15px/15px_225px_15px_255px]",
+                "rounded-md",
                 openIndex === index && "shadow-sketchy"
               )}
             >

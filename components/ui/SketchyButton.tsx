@@ -19,7 +19,7 @@ export default function SketchyButton({
   onClick,
 }: SketchyButtonProps) {
   const baseStyles =
-    "relative font-sketchy font-semibold cursor-pointer select-none";
+    " font-sketchy font-semibold cursor-pointer select-none hover:opacity-80";
 
   const variants = {
     primary: "bg-primary text-primary-foreground shadow-sketchy",
@@ -41,7 +41,7 @@ export default function SketchyButton({
         baseStyles,
         variants[variant],
         sizes[size],
-        "rounded-[255px_15px_225px_15px/15px_225px_15px_255px]",
+        "rounded-md",
         className
       )}
     >
